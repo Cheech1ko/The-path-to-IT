@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: Oswald;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+/* Заголовок*/
+header {
+    width: 100%;
+    height: 100px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    animation: shimmer 3s infinite;
+}
+/* Меню заголовка */
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+.menu__logo{
+    color: rgba(255, 254, 255, 0.74);
+    text-shadow: 0 0 10px rgba(140, 0, 255, 0.884);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.menu__ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 200;
+    text-transform: uppercase;
+    cursor: pointer;
+    gap: 30px;
+}
+.menu__link{
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.menu__link:hover{
+    color: #f0f0f0;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/* дневник*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.parallax-section {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.parallax-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%; /* Чуть больше для эффекта */
+    background-image: url('https://i.pinimg.com/736x/c8/37/ea/c837ea1a685f47462623309900ff24f2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ключевое свойство! */
+    filter: brightness(0.7); /* Затемняем для читаемости текста */
+}
+
+.parallax-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 2px 2px 4px rgba(250, 77, 77, 0.7);
+}
+
+.parallax-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #eceeed;
+    text-shadow: 2px 2px 4px rgba(250, 77, 77, 0.7);
+}
+
+.parallax-text p {
+    font-size: 1.3em;
+    line-height: 1.6;
+}
+/* Разные задержки для блоков */
+.text-block:nth-child(1) { transition-delay: 0.2s; }
+.text-block:nth-child(2) { transition-delay: 0.4s; }
+
+/* Форма ввода */
+.workout-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.form-input {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.form-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #00ff88;
+}
+
+.btn-add {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #cec9c7 0%, #07021bc2 100%);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+    white-space: nowrap;
+}
+
+.btn-add:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+}
+/* Карточки */
+.workout-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.workout-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #d7c9dbb6;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+}
+
+.workout-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.workout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.workout-date {
+    color: #d7c9dbb6;
+    font-weight: bold;
+}
+
+.workout-exercise {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.workout-stats {
+    color: #ccc;
+    font-size: 0.9em;
+}
+/* Как работатет */
+.how-it-works {
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    margin-top: 50px;
+}
+
+.how-it-works h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: rgba(255, 254, 255, 0.74);
+    text-shadow: 6px 10px 8px  rgba(6, 2, 10, 0.884);
+    font-size: 2.5em;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.step:hover {
+    transform: translate(10px)
+}
+
+.step-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    color: rgba(255, 254, 255, 0.74);
+    text-shadow: 6px 10px 8px  rgba(6, 2, 10, 0.884);
+    margin-bottom: 15px;
+}
+
+/* Преимущества */
+.features {
+    padding: 60px 20px;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: rgba(255, 254, 255, 0.74);
+    text-shadow: 6px 10px 8px  rgba(6, 2, 10, 0.884);
+    font-size: 2.5em;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    border-left: 4px solid #cdd1cf;
+}
+
+.feature h3 {
+    color: rgba(255, 254, 255, 0.74);
+    text-shadow: 6px 10px 8px  rgba(6, 2, 10, 0.884);
+    margin-bottom: 15px;
+}
+
+/* Герой секция */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Футер */
+.footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    border-top: 3px solid rgba(255, 255, 255, 0.2);
+background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}

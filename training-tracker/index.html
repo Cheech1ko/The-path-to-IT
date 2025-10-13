@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Trenbalone</title>
+</head>
+<body>
+    <header class="header">
+		<nav class="menu">
+			<a class="menu__logo" href="index.html">Yeaaaah body</a>
+			<ul class="menu__ul">
+				<li class="menu__li"><a class="menu__link" href="#">Сравнение</a></li>
+				<li class="menu__li"><a class="menu__link" href="#">Расписание</a></li>
+				<li class="menu__li"><a class="menu__link" href="#">Упражнения</a></li>
+				<li class="menu__li"><a class="menu__link" href="#">Подписка</a></li>
+			</ul>
+		</nav>
+	</header>
+    <div class="container">
+        <div class="parallax-section">
+    <div class="parallax-image">
+    </div>
+    <div class="parallax-text">
+        <h2>«Как ты думаешь, я внушаю страх?»</h2>
+        <p>Страх? — Я сделал тебя частью своего замысла, а сам не стал марать о него свои руки. Все опасности и трудности я взвалил на тебя. Так тебе не кажется, что я страшный человек? — Ты делаешь это, чтобы осуществить свою мечту. Ты ведь так считаешь? Так о чём тогда речь? — Ты прав».</p>
+    </div>
+</div>
+        <form id="workout-form" class="workout-form">
+            <div class="form-row">
+                <input type="date" id="date" class="form-input">
+                <input type="text" id="exercise" placeholder="Упражнение" class="form-input">
+                <input type="number" id="weight" placeholder="Вес (кг)" class="form-input">
+                <input type="number" id="reps" placeholder="Повторения" class="form-input">
+                <button type="submit" class="btn-add">+ Добавить</button>
+            </div>
+        </form>
+    </div>
+    <div class="workout-cards">
+            <!-- Карточка 1 -->
+            <div class="workout-card">
+                <div class="workout-header">
+                    <span class="workout-date">30.09.2025</span>
+                    <span>🏋️</span>
+                </div>
+                <div class="workout-exercise">Жим лёжа</div>
+                <div class="workout-stats">100 кг × 1 раз</div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="workout-card">
+                <div class="workout-header">
+                    <span class="workout-date">30.09.2025</span>
+                    <span>🦵</span>
+                </div>
+                <div class="workout-exercise">Разгибание на трицепс за головой</div>
+                <div class="workout-stats">11 кг × 10 раз</div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="workout-card">
+                <div class="workout-header">
+                    <span class="workout-date">04.10.2025</span>
+                    <span>💪</span>
+                </div>
+                <div class="workout-exercise">Подъём на бицепс</div>
+                <div class="workout-stats">55 кг × 3 раз</div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="workout-card">
+                <div class="workout-header">
+                    <span class="workout-date">04.10.2025</span>
+                    <span>🏋️‍♂️</span>
+                </div>
+                <div class="workout-exercise">Вертикальная тяга блока</div>
+                <div class="workout-stats">65 кг × 10 раз</div>
+            </div>
+            <!-- Карточка 5 -->
+            <div class="workout-card">
+                <div class="workout-header">
+                    <span class="workout-date">04.10.2025</span>
+                    <span>💪</span>
+                </div>
+                <div class="workout-exercise">Молоточки</div>
+                <div class="workout-stats">16 кг × 10 раз</div>
+            </div>
+            <!-- Карточка 6 -->
+            <div class="workout-card">
+                <div class="workout-header">
+                    <span class="workout-date">04.10.2025</span>
+                    <span>🏋️‍♂️</span>
+                </div>
+                <div class="workout-exercise">Горизонтальная тяга блока</div>
+                <div class="workout-stats">65 кг × 10 раз</div>
+            </div>
+            <!-- Карточка 7 -->
+            <div class="workout-card">
+                <div class="workout-header">
+                    <span class="workout-date">05.10.2025</span>
+                    <span>🦵</span>
+                </div>
+                <div class="workout-exercise">Разгибание ног сидя</div>
+                <div class="workout-stats">65 кг × 15 раз</div>
+            </div>
+            <!-- Карточка 8 -->
+            <div class="workout-card">
+                <div class="workout-header">
+                    <span class="workout-date">04.10.2025</span>
+                    <span>🏋️‍♂️</span>
+                </div>
+                <div class="workout-exercise">Сгибание ног лёжа</div>
+                <div class="workout-stats">60 кг × 8 раз</div>
+            </div>
+            <!-- Карточка 9 -->
+            <div class="workout-card">
+                <div class="workout-header">
+                    <span class="workout-date">04.10.2025</span>
+                    <span>🏋️‍♂️</span>
+                </div>
+                <div class="workout-exercise">Жим ногами в наклоне</div>
+                <div class="workout-stats">140 кг × 8 раз</div>
+            </div>
+        </div>
+
+        <!-- НОВЫЕ СЕКЦИИ -->
+        <section class="how-it-works">
+            <h2>Как это работает?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">📝</div>
+                    <h3>1. Добавь тренировку</h3>
+                    <p>Заполни форму данными о выполненных упражнениях</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">📊</div>
+                    <h3>2. Следи за прогрессом</h3>
+                    <p>Все твои результаты сохраняются в наглядных карточках</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🎯</div>
+                    <h3>3. Достигай целей</h3>
+                    <p>Анализируй статистику и ставь новые рекорды</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Преимущества ведения дневника</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>📈 Визуализация прогресса</h3>
+                    <p>Наглядно видишь рост рабочих весов и выносливости</p>
+                </div>
+                <div class="feature">
+                    <h3>💪 Мотивация</h3>
+                    <p>Сравниваешь текущие результаты с предыдущими</p>
+                </div>
+                <div class="feature">
+                    <h3>🎯 Целеполагание</h3>
+                    <p>Ставишь конкретные цели и отслеживаешь их достижение</p>
+                </div>
+            </div>
+        </section>
+    </main>
+        <!-- Подвал сайта -->
+        <footer class="footer">
+        <p>© 2025 Yeaaaah Buddy. Тренируйся в кайф!</p>
+    </footer>
+</body>
+<script>function checkScroll() {
+    const textBlocks = document.querySelectorAll('.text-block');
+    const triggerBottom = window.innerHeight * 0.8;
+
+    textBlocks.forEach(block => {
+        const blockTop = block.getBoundingClientRect().top;
+        
+        if (blockTop < triggerBottom) {
+            block.classList.add('active');
+        } else {
+            block.classList.remove('active');
+        }
+    });
+}
+
+// Запускаем при загрузке и скролле
+window.addEventListener('scroll', checkScroll);
+window.addEventListener('load', checkScroll);
+</script>
+</html>
