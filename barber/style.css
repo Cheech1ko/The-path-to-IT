@@ -1,0 +1,487 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Прелоадер */
+.preloader {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+}
+
+.preloader-text {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: rgb(240, 188, 18);
+}
+/* Хедер */
+.main-header {
+    background-color: #000;
+    border-bottom: 1px solid #333;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Общие стили для всех блоков хедера */
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Иконки */
+.icon {
+    color: #ffd700; /* Яркий желтый */
+    font-size: 1.1rem;
+    filter: drop-shadow(0 0 2px rgba(255, 215, 0, 0.5));
+}
+/* Адрес */
+.header-address {
+    color: #fff;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Часы работы */
+.working-hours {
+    color: #fff;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Телефон */
+.header-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-phone a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.header-phone a:hover {
+    color: #d4af37; /* Золотой цвет при наведении */
+}
+
+/* Кнопка записи */
+.header-btn {
+    background: linear-gradient(45deg, #d4af37, #ffd700);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.header-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(45deg, #ffd700, #d4af37);
+}
+
+/* Секции */
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Герой секция */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/originals/c6/64/d1/c664d1b51ab0350779ae31684ac75322.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    z-index: -1;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero-title {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 7rem;
+    color: rgb(240, 188, 18);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 6px 5px 2px#000;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-shadow: 6px 5px 2px#000;
+}
+
+.cta-button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid rgb(240, 188, 18);
+    padding: 12px 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* О нас */
+.about-section {
+    padding: 100px 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: rgb(240, 188, 18);
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.about-image {
+    height: 500px;
+    position: relative;
+}
+
+.parallax-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://hohloma-tattoo.ru/wp-content/uploads/2021/04/foto-za-prajs-1024x684.jpg'); /* Замените на ваше изображение */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Услуги */
+.services-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.services-section .parallax-bg {
+    background-image: url('https://avatars.mds.yandex.net/i?id=00e08a897e4a1831a156c2a239783e31e7480737-2451231-images-thumbs&n=13'); /* Замените на ваше изображение */
+    filter: brightness(0.7);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(240, 188, 18);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    opacity: 0.8;
+}
+
+/* Секция мастеров */
+.masters-section {
+    padding: 100px 0;
+    background-color: #000;
+}
+
+.masters-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    position: relative;
+}
+
+/* Шахматное расположение */
+.masters-grid:nth-child(odd) {
+    transform: translateY(-30px);
+}
+
+.masters-grid:nth-child(even) {
+    transform: translateY(30px);
+}
+
+/* Стили для карточки мастера */
+.masters-grid {
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.masters-grid:hover {
+    transform: translateY(-10px);
+}
+
+/* Контейнер для изображения */
+.masters-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.masters-img img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+    border-radius: 20px;
+}
+
+/* Эффект при наведении */
+.masters-grid:hover .masters-img img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Имя мастера */
+.masters-name {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.masters-grid:hover .masters-name {
+    opacity: 1;
+}
+
+/* Дополнительные эффекты */
+.masters-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.1) 30%,
+        rgba(0, 0, 0, 0.3) 70%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+}
+
+.masters-grid:hover .masters-img::before {
+    opacity: 1;
+}
+
+
+/* Галерея */
+.gallery-section {
+    padding: 100px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 400px;
+    position: relative;
+}
+
+
+.gallery-item:nth-child(1) .parallax-image {
+    background-image: url('https://avatars.mds.yandex.net/i?id=7784907f795d879ad6df4ad06a87ceea6b05980b-4075131-images-thumbs&n=13');
+}
+
+.gallery-item:nth-child(2) .parallax-image {
+    background-image: url('https://avatars.mds.yandex.net/i?id=c8759b2ea3345e9d6260f1fc126620bcbdfca6d4-12538603-images-thumbs&n=13');
+}
+
+.gallery-item:nth-child(3) .parallax-image {
+    background-image: url('https://avatars.mds.yandex.net/i?id=e4f1c7e19f43bd4a5b92aa21fa08ac05a3f7b537-4553276-images-thumbs&n=13');
+}
+
+.gallery-item:nth-child(4) .parallax-image {
+    background-image: url('https://avatars.mds.yandex.net/i?id=0ee465f988e16aeec1a6e9deb9d4cf96fad034be-5253306-images-thumbs&n=13');
+}
+
+
+/* Контакты */
+.contact-section {
+    padding: 100px 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: rgba(231, 179, 5, 0.808);
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.map-placeholder {
+    height: 400px;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Футер */
+.footer {
+    padding: 30px 0;
+    text-align: center;
+    background-color: #111;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}

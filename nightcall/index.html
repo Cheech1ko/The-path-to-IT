@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightcall - Kavinsky</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-app">
+        <!-- Фоновое изображение -->
+        <div class="background" style="background-image: url('https://ih1.redbubble.net/image.15450913.9739/flat,750x,075,f-pad,750x1000,f8f8f8.u4.jpg')"></div>
+        
+        <!-- Затемнение фона -->
+        <div class="overlay"></div>
+        
+        <!-- Основной контент -->
+        <main class="main-content">
+            <!-- Текст песни -->
+            <div class="lyrics-container">
+                <div class="lyrics">
+                    <p class="lyric-line active">There's something inside you</p>
+                    <p class="lyric-line">It's hard to explain</p>
+                    <p class="lyric-line">They're talking about you</p>
+                    <p class="lyric-line">But you're still the same</p>
+                    <p class="lyric-line">There's something inside you</p>
+                    <p class="lyric-line">It's hard to explain</p>
+                    <!-- Добавьте остальной текст песни -->
+                </div>
+            </div>
+        </main>
+        
+        <!-- Плеер в стиле Яндекс.Музыки -->
+        <footer class="player">
+            <div class="player-container">
+                <!-- Информация о треке -->
+                <div class="track-info">
+                    <div class="track-cover">
+                        <img src="drive mini.jpg" alt="Nightcall Cover">
+                    </div>
+                    <div class="track-details">
+                        <div class="track-title">Nightcall</div>
+                        <div class="track-artist">Kavinsky</div>
+                    </div>
+                    <button class="like-btn">♥</button>
+                </div>
+                
+                <!-- Элементы управления -->
+                <div class="player-controls">
+                    <div class="control-buttons">
+                        <button class="control-btn shuffle">↻</button>
+                        <button class="control-btn prev">⏮</button>
+                        <button class="control-btn play-pause">⏵</button>
+                        <button class="control-btn next">⏭</button>
+                        <button class="control-btn repeat">⟳</button>
+                    </div>
+                    
+                    <!-- Прогресс-бар -->
+                    <div class="progress-container">
+                        <span class="time-current">0:00</span>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <span class="time-total">4:20</span>
+                    </div>
+                </div>
+                
+                <!-- Дополнительные controls -->
+                <div class="player-extra">
+                    <button class="volume-btn">🔊</button>
+                    <input type="range" class="volume-slider" min="0" max="100" value="80">
+                    <button class="queue-btn">≡</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <audio id="audio-player" src="kavinsky-nightcall.mp3.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TableTime | Бронирование столиков</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <i class="fas fa-utensils"></i>
+                <span>TableTime</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#booking">Бронирование</a></li>
+                <li><a href="#restaurants">Рестораны</a></li>
+                <li><a href="#about">О нас</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-login">
+                    <i class="fas fa-user"></i>
+                    Войти
+                </button>
+            </div>
+        </nav>
+        
+        <div class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Найдите свой</span>
+                    <span class="title-line accent">идеальный столик</span>
+                </h1>
+                <p class="hero-subtitle">Бронируйте лучшие места в топовых ресторанах вашего города</p>
+                <button class="btn-primary" id="startBooking">
+                    Забронировать сейчас
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300" alt="Ресторан">
+                </div>
+                <div class="floating-card card-2">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=300" alt="Еда">
+                </div>
+                <div class="floating-card card-3">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=300" alt="Интерьер">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Booking Section -->
+        <section id="booking" class="booking-section">
+            <div class="container">
+                <h2 class="section-title">Забронируйте столик</h2>
+                
+                <div class="booking-container">
+                    <!-- Booking Form -->
+                    <div class="booking-form-container">
+                        <form id="bookingForm" class="booking-form">
+                            <div class="form-group">
+                                <label for="restaurant" class="form-label">
+                                    <i class="fas fa-store"></i>
+                                    Ресторан
+                                </label>
+                                <select id="restaurant" class="form-select" required>
+                                    <option value="">Выберите ресторан</option>
+                                    <option value="Итальянский дворик">🍝 Итальянский дворик</option>
+                                    <option value="Steak House">🥩 Steak House</option>
+                                    <option value="Суви-Маркет">🍣 Суши-Маркет</option>
+                                    <option value="La Parisienne">🥐 La Parisienne</option>
+                                    <option value="Гриль Бар">🔥 Гриль Бар</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="date" class="form-label">
+                                        <i class="fas fa-calendar"></i>
+                                        Дата
+                                    </label>
+                                    <input type="date" id="date" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="time" class="form-label">
+                                        <i class="fas fa-clock"></i>
+                                        Время
+                                    </label>
+                                    <input type="time" id="time" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guests" class="form-label">
+                                    <i class="fas fa-users"></i>
+                                    Количество гостей
+                                </label>
+                                <div class="guests-selector">
+                                    <button type="button" class="guest-btn" data-action="decrease">-</button>
+                                    <input type="number" id="guests" class="form-input" min="1" max="12" value="2" readonly>
+                                    <button type="button" class="guest-btn" data-action="increase">+</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-phone"></i>
+                                    Контактный телефон
+                                </label>
+                                <input type="tel" id="phone" class="form-input" placeholder="+7 (999) 999-99-99" required>
+                            </div>
+
+                            <button type="submit" class="btn-primary btn-submit">
+                                <i class="fas fa-search"></i>
+                                Показать доступные столики
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Restaurant Hall -->
+                    <div class="hall-container">
+                        <div class="hall-header">
+                            <h3>Выберите столик</h3>
+                            <div class="hall-legend">
+                                <div class="legend-item">
+                                    <div class="seat available"></div>
+                                    <span>Свободно</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="seat selected"></div>
+                                    <span>Выбрано</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="seat occupied"></div>
+                                    <span>Занято</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="restaurant-hall">
+                            <div class="hall-layout" id="hallLayout">
+                                <!-- Hall layout will be generated by JavaScript -->
+                            </div>
+                            
+                            <div class="hall-info">
+                                <div class="selected-table-info">
+                                    <h4>Выбранный столик: <span id="selectedTableNumber">-</span></h4>
+                                    <p>Вместимость: <span id="tableCapacity">-</span> человек</p>
+                                    <p>Тип: <span id="tableType">-</span></p>
+                                </div>
+                                
+                                <button class="btn-confirm" id="confirmBooking" disabled>
+                                    <i class="fas fa-check"></i>
+                                    Подтвердить бронирование
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Bookings -->
+        <section class="bookings-section">
+            <div class="container">
+                <h2 class="section-title">Мои бронирования</h2>
+                <div class="bookings-grid" id="bookingsGrid">
+                    <!-- Bookings will be populated by JavaScript -->
+                    <div class="no-bookings">
+                        <i class="fas fa-calendar-plus"></i>
+                        <h3>У вас пока нет бронирований</h3>
+                        <p>Забронируйте свой первый столик!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-utensils"></i>
+                    <span>TableTime</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">О нас</a>
+                    <a href="#">Рестораны</a>
+                    <a href="#">Контакты</a>
+                    <a href="#">Помощь</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TableTime. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
